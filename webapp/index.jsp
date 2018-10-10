@@ -17,72 +17,72 @@
     <div class="content my-3">
         <div class="row">
             <div class="col-lg-4 col-md-6">
-                <h5 class="d-flex justify-content-between align-items-center">전사<a href="#" class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">전사<a href="#" class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
-                <h5 class="d-flex justify-content-between align-items-center">마법사<a href="#"
-                                                                                    class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">마법사<a href="#"
+                                                                                    class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
-                <h5 class="d-flex justify-content-between align-items-center">탱커<a href="#" class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">탱커<a href="#" class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
-                <h5 class="d-flex justify-content-between align-items-center">암살자<a href="#"
-                                                                                    class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">암살자<a href="#"
+                                                                                    class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
-                <h5 class="d-flex justify-content-between align-items-center">원거리<a href="#"
-                                                                                    class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">원거리<a href="#"
+                                                                                    class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
-                <h5 class="d-flex justify-content-between align-items-center">서포터<a href="#"
-                                                                                    class="badge badge-primary">more</a>
-                </h5>
+                <h6 class="d-flex justify-content-between align-items-center">서포터<a href="#"
+                                                                                    class="badge badge-secondary">more</a>
+                </h6>
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
-                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                     </ul>
                 </div>
             </div>
