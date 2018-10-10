@@ -6,40 +6,88 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <jsp:include page="/WEB-INF/views/layout/head.jsp" flush="false"/>
+    <jsp:include page="/WEB-INF/views/layout/head.jsp" flush="false"/>
     <style type="text/css">
 
     </style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    <jsp:include page="/WEB-INF/views/layout/header.jsp" flush="false"/>
+    <div class="content my-3">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="d-flex justify-content-between align-items-center">전사<a href="#" class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
                 </div>
-
-                <form class="form-inline">
-                    <div class="form-group">
-                        <%--<label class="col-form-label col-form-label-sm" for="user_id">아이디</label>--%>
-                        <input type="text" class="form-control mx-sm-1 form-control-sm" id="user_id" name="user_id" placeholder="아이디">
-                        <input type="text" class="form-control mx-sm-1 form-control-sm" id="user_pw" name="user_pw" placeholder="비밀번호">
-                    </div>
-                    <button type="submit" class="btn btn-sm btn-primary mx-sm-1">sign in</button>
-                    <button type="submit" class="btn btn-sm btn-success ml-sm-1">sign up</button>
-                </form>
             </div>
-
-        </nav>
-    </header>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h5 class="d-flex justify-content-between align-items-center">마법사<a href="#"
+                                                                                    class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h5 class="d-flex justify-content-between align-items-center">탱커<a href="#" class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h5 class="d-flex justify-content-between align-items-center">암살자<a href="#"
+                                                                                    class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h5 class="d-flex justify-content-between align-items-center">원거리<a href="#"
+                                                                                    class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h5 class="d-flex justify-content-between align-items-center">서포터<a href="#"
+                                                                                    class="badge badge-primary">more</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
