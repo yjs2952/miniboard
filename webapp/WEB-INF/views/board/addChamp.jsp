@@ -25,44 +25,44 @@
                 <div class="form-group row">
                     <label for="champName" class="col-sm-2 col-form-label">챔피언 명</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="champName" name="champName">
+                        <input type="text" class="form-control" id="champName" name="champName" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2">역할</label>
                     <div class="col-sm-10">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role1" name="role">
+                            <input class="form-check-input" type="radio" id="role1" name="role" value="w" required>
                             <div class="form-check-label" for="role1">
                                 전사
                             </div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role2" name="role">
+                            <input class="form-check-input" type="radio" id="role2" name="role" value="t" required>
                             <div class="form-check-label" for="role2">
                                 탱커
                             </div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role3" name="role">
+                            <input class="form-check-input" type="radio" id="role3" name="role" value="a" required>
                             <div class="form-check-label" for="role3">
                                 암살자
                             </div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role4" name="role">
+                            <input class="form-check-input" type="radio" id="role4" name="role" value="w" required>
                             <div class="form-check-label" for="role4">
                                 마법사
                             </div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role5" name="role">
+                            <input class="form-check-input" type="radio" id="role5" name="role" value="d" required>
                             <div class="form-check-label" for="role5">
                                 원거리
                             </div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="role6" name="role">
+                            <input class="form-check-input" type="radio" id="role6" name="role" value="s" required>
                             <div class="form-check-label" for="role6">
                                 서포터
                             </div>
@@ -81,46 +81,46 @@
                         <div class="form-group row">
                             <div class="col-lg-2">체력</div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="hp1" name="hp1" placeholder="1레벨">
+                                <input type="text" class="form-control form-control-sm" id="hp1" name="hp1" placeholder="1레벨" required>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="hp18" name="hp18" placeholder="18레벨">
+                                <input type="text" class="form-control form-control-sm" id="hp18" name="hp18" placeholder="18레벨" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">마나</div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="mp1" name="mp1" placeholder="1레벨">
+                                <input type="text" class="form-control form-control-sm" id="mp1" name="mp1" placeholder="1레벨" required>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="mp18" name="mp18" placeholder="18레벨">
+                                <input type="text" class="form-control form-control-sm" id="mp18" name="mp18" placeholder="18레벨" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">공격력</div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="atk1" name="atk1" placeholder="1레벨">
+                                <input type="text" class="form-control form-control-sm" id="atk1" name="atk1" placeholder="1레벨" required>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="atk18" name="atk18" placeholder="18레벨">
+                                <input type="text" class="form-control form-control-sm" id="atk18" name="atk18" placeholder="18레벨" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">방어력</div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="df1" name="df1" placeholder="1레벨">
+                                <input type="text" class="form-control form-control-sm" id="df1" name="df1" placeholder="1레벨" required>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="df18" name="df18" placeholder="18레벨">
+                                <input type="text" class="form-control form-control-sm" id="df18" name="df18" placeholder="18레벨" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">사정거리</div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="ar1" name="ar1" placeholder="1레벨">
+                                <input type="text" class="form-control form-control-sm" id="ar1" name="ar1" placeholder="1레벨" required>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" class="form-control form-control-sm" id="ar18" name="ar18" placeholder="18레벨">
+                                <input type="text" class="form-control form-control-sm" id="ar18" name="ar18" placeholder="18레벨" required>
                             </div>
                         </div>
                     </div>
@@ -132,13 +132,13 @@
                         <div class="form-group row">
                             <div class="col-lg-2">패시브 명</div>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-sm" id="passive" name="passive">
+                                <input type="text" class="form-control form-control-sm" id="passive" name="passive" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">패시브 설명</div>
                             <div class="col-lg-10">
-                                <textarea type="text" class="form-control form-control-sm" id="passiveComment" name="passiveComment"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="passiveComment" name="passiveComment" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -149,49 +149,49 @@
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 명(Q)</div>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-sm" id="skillQ" name="skillQ">
+                                <input type="text" class="form-control form-control-sm" id="skillQ" name="skillQ" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 설명(Q)</div>
                             <div class="col-lg-10">
-                                <textarea type="text" class="form-control form-control-sm" id="skillQComment" name="skillQComment"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="skillQComment" name="skillQComment" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 명(W)</div>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-sm" id="skillW" name="skillW">
+                                <input type="text" class="form-control form-control-sm" id="skillW" name="skillW" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 설명(W)</div>
                             <div class="col-lg-10">
-                                <textarea type="text" class="form-control form-control-sm" id="skillWComment" name="skillWComment"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="skillWComment" name="skillWComment" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 명(E)</div>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-sm" id="skillE" name="skillE">
+                                <input type="text" class="form-control form-control-sm" id="skillE" name="skillE" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 설명(E)</div>
                             <div class="col-lg-10">
-                                <textarea type="text" class="form-control form-control-sm" id="skillEComment" name="skillEComment"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="skillEComment" name="skillEComment" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 명(R)</div>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-sm" id="skillR" name="skillR">
+                                <input type="text" class="form-control form-control-sm" id="skillR" name="skillR" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-2">스킬 설명(R)</div>
                             <div class="col-lg-10">
-                                <textarea type="text" class="form-control form-control-sm" id="skillRComment" name="skillRComment"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="skillRComment" name="skillRComment" required></textarea>
                             </div>
                         </div>
                     </div>

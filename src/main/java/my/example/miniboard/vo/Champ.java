@@ -4,19 +4,19 @@ import java.util.Date;
 
 public class Champ {
     private int cid;    // 챔피언 번호
-    private String[] role;    // 챔피언 역할
+    private String role;    // 챔피언 역할
     private String cname;
-    private int hp1;
-    private int mp1;
-    private int atk1;
-    private int df1;
-    private int hp18;
-    private int mp18;
-    private int atk18;
-    private int df18;
-    private int range1;
-    private int range18;
-    private int passive;
+    private String hp1;
+    private String mp1;
+    private String atk1;
+    private String df1;
+    private String hp18;
+    private String mp18;
+    private String atk18;
+    private String df18;
+    private String range1;
+    private String range18;
+    private String passive;
     private String passive_comment;
     private String skillq;
     private String skillq_comment;
@@ -33,15 +33,11 @@ public class Champ {
         return cid;
     }
 
-    public void setCid(int cid) {
-        this.cid = cid;
-    }
-
-    public String[] getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(String[] role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
@@ -53,91 +49,91 @@ public class Champ {
         this.cname = cname;
     }
 
-    public int getHp1() {
+    public String getHp1() {
         return hp1;
     }
 
-    public void setHp1(int hp1) {
+    public void setHp1(String hp1) {
         this.hp1 = hp1;
     }
 
-    public int getMp1() {
+    public String getMp1() {
         return mp1;
     }
 
-    public void setMp1(int mp1) {
+    public void setMp1(String mp1) {
         this.mp1 = mp1;
     }
 
-    public int getAtk1() {
+    public String getAtk1() {
         return atk1;
     }
 
-    public void setAtk1(int atk1) {
+    public void setAtk1(String atk1) {
         this.atk1 = atk1;
     }
 
-    public int getDf1() {
+    public String getDf1() {
         return df1;
     }
 
-    public void setDf1(int df1) {
+    public void setDf1(String df1) {
         this.df1 = df1;
     }
 
-    public int getHp18() {
+    public String getHp18() {
         return hp18;
     }
 
-    public void setHp18(int hp18) {
+    public void setHp18(String hp18) {
         this.hp18 = hp18;
     }
 
-    public int getMp18() {
+    public String getMp18() {
         return mp18;
     }
 
-    public void setMp18(int mp18) {
+    public void setMp18(String mp18) {
         this.mp18 = mp18;
     }
 
-    public int getAtk18() {
+    public String getAtk18() {
         return atk18;
     }
 
-    public void setAtk18(int atk18) {
+    public void setAtk18(String atk18) {
         this.atk18 = atk18;
     }
 
-    public int getDf18() {
+    public String getDf18() {
         return df18;
     }
 
-    public void setDf18(int df18) {
+    public void setDf18(String df18) {
         this.df18 = df18;
     }
 
-    public int getRange1() {
+    public String getRange1() {
         return range1;
     }
 
-    public void setRange1(int range1) {
+    public void setRange1(String range1) {
         this.range1 = range1;
     }
 
-    public int getRange18() {
+    public String getRange18() {
         return range18;
     }
 
-    public void setRange18(int range18) {
+    public void setRange18(String range18) {
         this.range18 = range18;
     }
 
-    public int getPassive() {
+    public String getPassive() {
         return passive;
     }
 
-    public void setPassive(int passive) {
+    public void setPassive(String passive) {
         this.passive = passive;
     }
 
@@ -227,5 +223,36 @@ public class Champ {
 
     public void setUpdate_date(Date update_date) {
         this.update_date = update_date;
+    }
+
+    @Override
+    public String toString() {
+        return "Champ{" +
+                "cid=" + cid +
+                ", role='" + role + '\'' +
+                ", cname='" + cname + '\'' +
+                ", hp1='" + hp1 + '\'' +
+                ", mp1='" + mp1 + '\'' +
+                ", atk1='" + atk1 + '\'' +
+                ", df1='" + df1 + '\'' +
+                ", hp18='" + hp18 + '\'' +
+                ", mp18='" + mp18 + '\'' +
+                ", atk18='" + atk18 + '\'' +
+                ", df18='" + df18 + '\'' +
+                ", range1='" + range1 + '\'' +
+                ", range18='" + range18 + '\'' +
+                ", passive='" + passive + '\'' +
+                ", passive_comment='" + passive_comment + '\'' +
+                ", skillq='" + skillq + '\'' +
+                ", skillq_comment='" + skillq_comment + '\'' +
+                ", skillw='" + skillw + '\'' +
+                ", skillw_comment='" + skillw_comment + '\'' +
+                ", skille='" + skille + '\'' +
+                ", skille_comment='" + skille_comment + '\'' +
+                ", skillr='" + skillr + '\'' +
+                ", skillr_comment='" + skillr_comment + '\'' +
+                ", register_date=" + register_date +
+                ", update_date=" + update_date +
+                '}';
     }
 }

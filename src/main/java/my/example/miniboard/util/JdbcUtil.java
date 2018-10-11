@@ -1,8 +1,7 @@
 package my.example.miniboard.util;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
+import java.net.URL;
 import java.sql.*;
 import java.util.Properties;
 
@@ -17,8 +16,10 @@ public class JdbcUtil {
         String pw = null;
 
         try {
-            Reader reader = new FileReader("C:\\STUDY\\IntelliJ_Projects\\miniboard\\src\\main\\resources\\DB\\db.properties");
-            prop.load(reader);
+            ClassLoader currentThreadClassLoader = Thread.currentThread().getContextClassLoader();
+            URL resourceURl = currentThreadClassLoader.getResource("DB/db.properties");
+
+            prop.load(resourceURl.openStream());
 
             driver = prop.getProperty("JDBC.Driver");
             url = prop.getProperty("JDBC.ConnectionURL");
