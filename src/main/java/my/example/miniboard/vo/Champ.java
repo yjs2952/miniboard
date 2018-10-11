@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Champ {
     private int cid;    // 챔피언 번호
-    private String role;    // 챔피언 역할
+    private String[] role;    // 챔피언 역할
     private String cname;
     private int hp1;
     private int mp1;
@@ -37,11 +37,11 @@ public class Champ {
         this.cid = cid;
     }
 
-    public String getRole() {
+    public String[] getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(String[] role) {
         this.role = role;
     }
 
