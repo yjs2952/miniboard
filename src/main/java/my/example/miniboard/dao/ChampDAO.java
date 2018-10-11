@@ -1,12 +1,50 @@
 package my.example.miniboard.dao;
 
 import my.example.miniboard.util.JdbcUtil;
+import my.example.miniboard.vo.Champ;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChampDAO {
+
+    public List<Champ> champList(){
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        List<Champ> list = new ArrayList<>();
+
+        String sql = "SELECT cid, cname, role, register_date, update_date FROM champboard";
+
+        try {
+            conn = JdbcUtil.connection();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Champ champ = new Champ();
+                champ.setCid(rs.getInt(1));
+                champ.setCname(rs.getString(2));
+                champ.setRole(rs.getString(3));
+                champ.setRegister_date(rs.getDate(4));
+                champ.setUpdate_date(rs.getDate(5));
+                list.add(champ);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            JdbcUtil.close(conn, ps, rs);
+        }
+
+        return list;
+    }
 
     public int addChamp(HttpServletRequest req){
 
@@ -45,7 +83,6 @@ public class ChampDAO {
             result = ps.executeUpdate();
 
         } catch (Exception e) {
-            e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
             JdbcUtil.close(conn, ps);

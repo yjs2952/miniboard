@@ -33,6 +33,10 @@ public class Champ {
         return cid;
     }
 
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
     public String getRole() {
         return role;
     }
