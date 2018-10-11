@@ -46,7 +46,7 @@
             <div class="" id="champList">
                 <div class="list" style="margin: 8px 0 0 4px; overflow: hidden;">
                     <c:forEach items="${champList}" var="item">
-                        <a href="/champBoard?cid=${item.cid}" class="float-left text-center">
+                        <a href="/champboard?cid=${item.cid}" class="float-left text-center">
                             <img src="https://unsplash.it/600.jpg?image=251" class="img-thumbnail" style="width: 48px; height: 48px; margin: 2px; border: 0;">
                             <div>${item.cname}</div>
                         </a>
