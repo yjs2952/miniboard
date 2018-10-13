@@ -20,7 +20,7 @@
 <div class="container">
     <jsp:include page="/WEB-INF/views/layout/header.jsp" flush="false"/>
     <div class="content">
-        <div class="mb-3">
+        <div class="mb-3" id="champInfo">
             <nav class="m-3 ">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -121,14 +121,14 @@
                     </ul>
                     <div class="tab-content mx-3" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="passive" role="tabpanel" aria-labelledby="skill">
-                            <div class="jumbotron col-8">
+                            <div class="jumbotron py-3 col-8">
                                 <p class="lead">폭풍이 택한 자 (Chosen of the Storm)</p>
                                 <hr class="my-4">
                                 <p>체력이 30% 이하가 되면 최대 체력의 30%를 6초에 걸쳐 회복합니다. 재사용 대기시간은 120초입니다.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="skillq" role="tabpanel" aria-labelledby="skillq">
-                            <div class="jumbotron col-8">
+                            <div class="jumbotron py-3 col-8">
                                 <p class="lead">천둥 몰아치기 (Rolling Thunder)</p>
                                 <hr class="my-4">
                                 <p>볼리베어가 네 발로 뛰어다니며 적을 사냥하며 이동 속도가 4초간 15/17.5/20/22.5/25% 상승합니다. 적 챔피언에게 다가갈 때는 이동 속도가
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="skillw" role="tabpanel" aria-labelledby="skillw">
-                            <div class="jumbotron col-8">
+                            <div class="jumbotron py-3 col-8">
                                 <p class="lead">광란 (Frenzy)</p>
                                 <hr class="my-4">
                                 <p>
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="skille" role="tabpanel" aria-labelledby="skille">
-                            <div class="jumbotron col-8">
+                            <div class="jumbotron py-3 col-8">
                                 <p class="lead">우렁찬 포효 (Majestic Roar)</p>
                                 <hr class="my-4">
                                 <p>
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="skillr" role="tabpanel" aria-labelledby="skillr">
-                            <div class="jumbotron col-8">
+                            <div class="jumbotron py-3 col-8">
                                 <p class="lead">천둥 발톱 (Thunder Claws)</p>
                                 <hr class="my-4">
                                 <p>
@@ -179,31 +179,36 @@
                 </div>
             </div>
         </div>
-        <div>
-            <table class="table table-striped table-hover mx-4">
-                <colgroup>
-                    <col width="20%">
-                    <col width="40%">
-                    <col width="20%">
-                    <col width="20%">
-                </colgroup>
+        <div class="mx-4">
+            <div class="mb-3 float-right">
+                <a href="/boardWrite" class="btn btn-sm btn-primary">글 쓰기</a>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="40%">
+                        <col width="20%">
+                        <col width="20%">
+                    </colgroup>
                     <thead>
-                        <tr>
-                            <th>챔피언</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>날짜</th>
-                        </tr>
+                    <tr>
+                        <th>챔피언</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>날짜</th>
+                    </tr>
                     </thead>
-                <tbody>
+                    <tbody>
                     <tr class="click-table" style="cursor: pointer" href="#">
                         <td>볼리베어</td>
                         <td>[M2] 자박곰 탑볼리베어[7]</td>
                         <td>곰탱이</td>
                         <td>2018-10-10</td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
