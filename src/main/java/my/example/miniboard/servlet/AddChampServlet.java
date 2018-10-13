@@ -29,11 +29,12 @@ public class AddChampServlet extends HttpServlet {
 
         req.setCharacterEncoding("utf-8");
 
-        Map<String, String[]> parameterMap = req.getParameterMap();
+        // 로그인 확인
+
+        // admin 계정인지 확인
 
         ChampDAO dao = new ChampDAO();
         dao.addChamp(req);
-
 
         resp.sendRedirect("/champList");
     }
