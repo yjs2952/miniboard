@@ -89,6 +89,3 @@ buildNumber.properties
 
 *.iml
 .idea
-
-# DB info
-db.properties
