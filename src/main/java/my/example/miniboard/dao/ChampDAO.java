@@ -20,7 +20,7 @@ public class ChampDAO {
 
         List<Champ> list = new ArrayList<>();
 
-        String sql = "SELECT cid, cname, role, register_date, update_date FROM champboard";
+        String sql = "SELECT cid, cname, role, register_date, update_date FROM champinfo";
 
         try {
             conn = JdbcUtil.connection();
@@ -52,7 +52,7 @@ public class ChampDAO {
         PreparedStatement ps = null;
         int result = 0;
 
-        String sql = "INSERT INTO champboard (cname, role, hp1, hp18, mp1, mp18, atk1, atk18, df1, df18, range1, range18, passive, passive_comment, skillq, skillq_comment, skillw, skillw_comment, skille, skille_comment, skillr, skillr_comment, register_date) " +
+        String sql = "INSERT INTO champinfo (cname, role, hp1, hp18, mp1, mp18, atk1, atk18, df1, df18, range1, range18, passive, passive_comment, skillq, skillq_comment, skillw, skillw_comment, skille, skille_comment, skillr, skillr_comment, register_date) " +
                 "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
 
         try {

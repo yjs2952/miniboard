@@ -36,6 +36,13 @@
             <version>8.0.12</version>
         </dependency>
 
+        <!-- 마리아디비 -->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>2.2.5</version>
+        </dependency>
+
         <!-- 부트스트랩 및 Jquery -->
         <dependency>
             <groupId>org.webjars.bower</groupId>
