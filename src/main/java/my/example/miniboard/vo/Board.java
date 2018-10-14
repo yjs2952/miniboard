@@ -75,4 +75,18 @@ public class Board {
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "boardId=" + boardId +
+                ", boardTitle='" + boardTitle + '\'' +
+                ", boardContent='" + boardContent + '\'' +
+                ", boardAuthor='" + boardAuthor + '\'' +
+                ", boardUid='" + boardUid + '\'' +
+                ", boardCid='" + boardCid + '\'' +
+                ", registerDate=" + registerDate +
+                ", updateDate=" + updateDate +
+                '}';
+    }
 }

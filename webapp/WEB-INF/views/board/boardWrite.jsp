@@ -17,10 +17,14 @@
     <div class="content my-3">
 
         <form id="imgBoardForm" class="m-lg-5" role="form" method="post">
+            <div>
+                <input type="hidden" name="boardCid" value="${param.cid}">
+                <input type="hidden" name="boardUid" value="${sessionScope.id}">
+            </div>
             <div class="form-group row">
                 <label class="col-lg 2">제목</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="subject" name="subject" required>
+                    <input type="text" class="form-control" id="subject" name="title" required>
                 </div>
             </div>
             <div class="form-group row">

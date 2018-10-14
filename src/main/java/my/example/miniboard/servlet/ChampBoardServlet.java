@@ -13,6 +13,9 @@ public class ChampBoardServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/board/champBoard.jsp");
         rd.forward(req, resp);
     }

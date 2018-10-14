@@ -181,7 +181,7 @@
         </div>
         <div class="mx-4">
             <div class="mb-3 float-right">
-                <a href="/boardWrite" class="btn btn-sm btn-primary">글 쓰기</a>
+                <a href="/boardWrite?cid=${param.cid}" class="btn btn-sm btn-primary">글 쓰기</a>
             </div>
             <div>
                 <table class="table table-striped table-hover">

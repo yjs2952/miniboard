@@ -1,5 +1,8 @@
 package my.example.miniboard.servlet;
 
+import my.example.miniboard.dao.BoardDAO;
+import my.example.miniboard.vo.Board;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +25,17 @@ public class BoardWriteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setCharacterEncoding("utf-8");
+        Board board = new Board();
+        board.setBoardCid(req.getParameter("boardCid"));
+        //board.setBoardUid(req.getParameter("boardUid"));\
+        board.setBoardUid("admin00");
+        board.setBoardTitle(req.getParameter("title"));
+        board.setBoardContent(req.getParameter("content"));
+        System.out.println(board.toString());
+
+        BoardDAO dao = new BoardDAO();
+        dao.boardWrite(board);
+
 
         resp.sendRedirect("/champboard");
     }
