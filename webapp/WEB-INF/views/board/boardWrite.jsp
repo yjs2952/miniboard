@@ -8,9 +8,7 @@
 <head>
     <jsp:include page="/WEB-INF/views/layout/head.jsp" flush="false"/>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#summernote').summernote();
-        });
+
     </script>
 </head>
 <body>
@@ -28,7 +26,7 @@
             <div class="form-group row">
                 <label class="col-lg-2">내용</label>
                 <div class="col-lg-10">
-                    <textarea id="summernote" class="form-control" rows="10" name="content">
+                    <textarea id="summernote" class="form-control" rows="10" name="content" required>
                     </textarea>
                 </div>
             </div>
