@@ -48,7 +48,6 @@ public class ChampBoardWriteServlet extends HttpServlet {
         BoardDAO dao = new BoardDAO();
         dao.boardWrite(board);
 
-
         resp.sendRedirect("/champboard");
     }
 }

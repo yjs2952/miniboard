@@ -21,7 +21,8 @@ public class BoardDAO {
 
         String sql = "select a.bid, a.board_title, a.board_content, a.board_uid, b.cname, a.register_date from board a\n" +
                 "inner join champinfo b\n" +
-                "where a.cid = b.cid;";
+                "where a.cid = b.cid\n" +
+                "ORDER BY a.register_date";
 
         try {
             jdbcUtil = JdbcUtil.getInstance();

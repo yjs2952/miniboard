@@ -9,16 +9,15 @@ public class JdbcUtil {
 
     private static JdbcUtil getInstance = new JdbcUtil();
     private Connection conn;
+    private String driver;
+    private String url;
+    private String user;
+    private String pw;
 
     private JdbcUtil(){
         ClassLoader classLoader = null;
         Properties prop = null;
         URL resourceURl = null;
-
-        String driver = null;
-        String url = null;
-        String user = null;
-        String pw = null;
 
         try {
             classLoader = Thread.currentThread().getContextClassLoader();
@@ -31,9 +30,6 @@ public class JdbcUtil {
             user = prop.getProperty("JDBC.Username");
             pw = prop.getProperty("JDBC.Password");
 
-            Class.forName(driver);
-            conn = DriverManager.getConnection(url, user, pw);
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -44,6 +40,13 @@ public class JdbcUtil {
     }
 
     public Connection getConnection() {
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pw);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return conn;
     }
 
