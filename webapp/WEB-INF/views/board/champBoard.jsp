@@ -186,13 +186,15 @@
             <div>
                 <table class="table table-striped table-hover">
                     <colgroup>
-                        <col width="20%">
+                        <col width="10%">
+                        <col width="15%">
                         <col width="40%">
-                        <col width="20%">
+                        <col width="15%">
                         <col width="20%">
                     </colgroup>
                     <thead>
                     <tr>
+                        <th>번호</th>
                         <th>챔피언</th>
                         <th>제목</th>
                         <th>작성자</th>
@@ -200,12 +202,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="click-table" style="cursor: pointer" href="#">
-                        <td>볼리베어</td>
-                        <td>[M2] 자박곰 탑볼리베어[7]</td>
-                        <td>곰탱이</td>
-                        <td>2018-10-10</td>
-                    </tr>
+                        <c:forEach items="${boardList}" var="item">
+                            <tr class="click-table" style="cursor: pointer" href="#">
+                                <td>${item.boardId}</td>
+                                <td>${item.boardCname}</td>
+                                <td>${item.boardContent}</td>
+                                <td>${item.boardUid}</td>
+                                <td>${item.registerDate}</td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </div>

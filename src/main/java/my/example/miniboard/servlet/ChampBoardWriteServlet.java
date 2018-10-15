@@ -1,6 +1,7 @@
 package my.example.miniboard.servlet;
 
 import my.example.miniboard.dao.BoardDAO;
+import my.example.miniboard.util.ParamUtil;
 import my.example.miniboard.vo.Board;
 
 import javax.servlet.RequestDispatcher;
@@ -10,9 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 @WebServlet("/boardWrite")
-public class BoardWriteServlet extends HttpServlet {
+public class ChampBoardWriteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,6 +25,16 @@ public class BoardWriteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Map<String, String[]> paramMap = req.getParameterMap();
+        String valCheck = ParamUtil.validationCheck(paramMap);
+
+        if (valCheck != null) {
+            System.out.println("null 확인 : " + valCheck);
+
+            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/board/champBoard.jsp");
+            rd.forward(req, resp);
+        }
 
         req.setCharacterEncoding("utf-8");
         Board board = new Board();

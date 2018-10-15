@@ -1,6 +1,7 @@
 package my.example.miniboard.servlet;
 
 import my.example.miniboard.dao.ChampDAO;
+import my.example.miniboard.util.ParamUtil;
 import my.example.miniboard.vo.Champ;
 
 import javax.servlet.RequestDispatcher;
@@ -13,10 +14,12 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/champList")
-public class ChampListServlet extends HttpServlet {
+public class ChampListServletServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
 
         ChampDAO dao = new ChampDAO();
         List<Champ> list =  dao.champList();
