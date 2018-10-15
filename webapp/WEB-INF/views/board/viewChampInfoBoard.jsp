@@ -204,10 +204,10 @@
                     <tbody>
                         <c:forEach items="${boardList}" var="item">
                             <tr class="click-table" style="cursor: pointer" href="#">
-                                <td>${item.boardId}</td>
-                                <td>${item.boardCname}</td>
-                                <td>${item.boardContent}</td>
-                                <td>${item.boardUid}</td>
+                                <td>${item.id}</td>
+                                <td>${item.cname}</td>
+                                <td>${item.content}</td>
+                                <td>${item.uid}</td>
                                 <td>${item.registerDate}</td>
                             </tr>
                         </c:forEach>

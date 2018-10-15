@@ -24,7 +24,7 @@ public class ChampListServlet extends HttpServlet {
 
         req.setAttribute("champList", list);
 
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/board/champList.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/board/viewChampList.jsp");
         rd.forward(req, resp);
     }
 }
