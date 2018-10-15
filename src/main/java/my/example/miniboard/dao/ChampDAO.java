@@ -67,10 +67,9 @@ public class ChampDAO {
         }
 
         return champ;
-
     }
 
-    public List<Champ> champList() {
+    public List<Champ> getList() {
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -79,7 +78,7 @@ public class ChampDAO {
 
         List<Champ> list = new ArrayList<>();
 
-        String sql = "SELECT cid, cname, role, register_date, update_date FROM champinfo";
+        String sql = "SELECT cid, cname, role, register_date, update_date FROM champinfo ORDER BY register_date";
 
         try {
             jdbcUtil = JdbcUtil.getInstance();

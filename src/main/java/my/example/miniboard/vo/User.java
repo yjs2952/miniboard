@@ -7,7 +7,7 @@ public class User {
     private String password;
     private String email1;   //아이디 부분
     private String email2;  // @ 뒤 주소 부분
-    private int isAdmin;
+    private int isAdmin;    // admin 여부 (1: 관리자, 0: 일반유저)
     private Date registerDate;
     private Date updateDate;
     private String name;

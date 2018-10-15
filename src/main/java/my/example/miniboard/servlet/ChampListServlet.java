@@ -14,15 +14,13 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/champList")
-public class ChampListServletServlet extends HttpServlet {
+public class ChampListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-
         ChampDAO dao = new ChampDAO();
-        List<Champ> list =  dao.champList();
+        List<Champ> list =  dao.getList();
 
         req.setAttribute("champList", list);
 

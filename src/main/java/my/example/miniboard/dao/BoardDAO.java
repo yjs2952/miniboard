@@ -19,9 +19,9 @@ public class BoardDAO {
         JdbcUtil jdbcUtil = null;
         List<Board> list = new ArrayList<>();
 
-        String sql = "select a.bid, a.board_title, a.board_content, a.board_uid, b.cname, a.register_date from board a\n" +
-                "inner join champinfo b\n" +
-                "where a.cid = b.cid\n" +
+        String sql = "SELECT a.bid, a.board_title, a.board_content, a.board_uid, b.cname, a.register_date FROM board a\n" +
+                "INNER JOIN champinfo b\n" +
+                "WHERE a.cid = b.cid\n" +
                 "ORDER BY a.register_date";
 
         try {
@@ -32,11 +32,11 @@ public class BoardDAO {
 
             while (rs.next()) {
                 Board board = new Board();
-                board.setBoardId(rs.getInt(1));
-                board.setBoardTitle(rs.getString(2));
-                board.setBoardContent(rs.getString(3));
-                board.setBoardUid(rs.getString(4));
-                board.setBoardCname(rs.getString(5));
+                board.setId(rs.getInt(1));
+                board.setTitle(rs.getString(2));
+                board.setContent(rs.getString(3));
+                board.setUid(rs.getString(4));
+                board.setCname(rs.getString(5));
                 board.setRegisterDate(rs.getDate(6));
                 list.add(board);
             }
@@ -53,7 +53,7 @@ public class BoardDAO {
         return list;
     }
 
-    public int boardWrite(Board board) {
+    public int write(Board board) {
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -67,10 +67,10 @@ public class BoardDAO {
             jdbcUtil = JdbcUtil.getInstance();
             conn = jdbcUtil.getConnection();
             ps = conn.prepareStatement(sql);
-            ps.setString(1, board.getBoardTitle());
-            ps.setString(2, board.getBoardContent());
-            ps.setString(3, board.getBoardUid());
-            ps.setString(4, board.getBoardCid());
+            ps.setString(1, board.getTitle());
+            ps.setString(2, board.getContent());
+            ps.setString(3, board.getUid());
+            ps.setString(4, board.getCid());
             result = ps.executeUpdate();
 
         } catch (Exception e) {

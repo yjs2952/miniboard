@@ -4,8 +4,10 @@ import java.util.Date;
 
 public class BoardReply {
     private int rid;    // 댓글 번호
-    private String replyUid;    // 작성자 아이디
-    private String replyContent;
+    private int bid;    // 게시글 번호
+    private int cid;    // 챔피언 번호
+    private String uid;    // 작성자 아이디
+    private String content;
     private Date registerDate;
     private Date updateDate;
 
@@ -17,20 +19,36 @@ public class BoardReply {
         this.rid = rid;
     }
 
-    public String getReplyUid() {
-        return replyUid;
+    public int getBid() {
+        return bid;
     }
 
-    public void setReplyUid(String replyUid) {
-        this.replyUid = replyUid;
+    public void setBid(int bid) {
+        this.bid = bid;
     }
 
-    public String getReplyContent() {
-        return replyContent;
+    public int getCid() {
+        return cid;
     }
 
-    public void setReplyContent(String replyContent) {
-        this.replyContent = replyContent;
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public Date getRegisterDate() {
