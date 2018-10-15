@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="form-group">
                                                 <button type="button" class="btn btn-sm btn-primary mx-sm-1">sign in</button>
-                                                <a href="/miniboard/join"><button type="button" class="btn btn-sm btn-success ml-sm-1">sign up</button> </a>
+                                                <a href="/join"><button type="button" class="btn btn-sm btn-success ml-sm-1">sign up</button> </a>
                                          </div>
                                 </div>
                         </form>
