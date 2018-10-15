@@ -9,6 +9,7 @@ public class Board {
     private String boardAuthor;
     private String boardUid;    // 게시글 작성자 id
     private String boardCid;    // 챔피언 번호
+    private String boardCname;
     private Date registerDate;
     private Date updateDate;
 
@@ -18,6 +19,14 @@ public class Board {
 
     public void setBoardId(int boardId) {
         this.boardId = boardId;
+    }
+
+    public String getBoardCname() {
+        return boardCname;
+    }
+
+    public void setBoardCname(String boardCname) {
+        this.boardCname = boardCname;
     }
 
     public String getBoardTitle() {

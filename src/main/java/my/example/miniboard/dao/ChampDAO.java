@@ -12,6 +12,59 @@ import java.util.List;
 
 public class ChampDAO {
 
+    public Champ champAbility(int cid){
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        String sql = "SELECT cid, cname, role, hp1, hp18, mp1, mp18, atk1, atk18, df1, df18, range1, range18, passive, passive_comment, skillq, skillq_comment, skillw, skillw_comment, skille, skille_comment, skillr, skillr_comment, register_date, update_date FROM champinfo where cid=?";
+        Champ champ = null;
+        try {
+            conn = JdbcUtil.connection();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, cid);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                champ = new Champ();
+                champ.setCid(rs.getInt(1));
+                champ.setCname(rs.getString(2));
+                champ.setRole(rs.getString(3));
+                champ.setHp1(rs.getString(4));
+                champ.setHp18(rs.getString(5));
+                champ.setMp1(rs.getString(6));
+                champ.setMp18(rs.getString(7));
+                champ.setAtk1(rs.getString(8));
+                champ.setAtk18(rs.getString(9));
+                champ.setDf1(rs.getString(10));
+                champ.setDf18(rs.getString(11));
+                champ.setRange1(rs.getString(12));
+                champ.setRange18(rs.getString(13));
+                champ.setPassive(rs.getString(14));
+                champ.setPassive_comment(rs.getString(15));
+                champ.setSkillq(rs.getString(16));
+                champ.setSkillq_comment(rs.getString(17));
+                champ.setSkillw(rs.getString(18));
+                champ.setSkillw_comment(rs.getString(19));
+                champ.setSkille(rs.getString(20));
+                champ.setSkille_comment(rs.getString(21));
+                champ.setSkillr(rs.getString(22));
+                champ.setSkillr_comment(rs.getString(23));
+                champ.setRegister_date(rs.getDate(24));
+                champ.setUpdate_date(rs.getDate(25));
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            JdbcUtil.close(conn, ps, rs);
+        }
+
+        return champ;
+
+    }
+
     public List<Champ> champList(){
 
         Connection conn = null;

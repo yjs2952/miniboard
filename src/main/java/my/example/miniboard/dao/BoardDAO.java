@@ -19,7 +19,9 @@ public class BoardDAO {
 
         List<Board> list = new ArrayList<>();
 
-        String sql = "SELECT bid, board_title, board_content, board_uid, cid, register_date FROM board";
+        String sql = "select a.bid, a.board_title, a.board_content, a.board_uid, b.cname, a.register_date from board a\n" +
+                "inner join champinfo b\n" +
+                "where a.cid = b.cid;";
 
         try {
             conn = JdbcUtil.connection();
@@ -32,7 +34,7 @@ public class BoardDAO {
                 board.setBoardTitle(rs.getString(2));
                 board.setBoardContent(rs.getString(3));
                 board.setBoardUid(rs.getString(4));
-                board.setBoardCid(rs.getString(5));
+                board.setBoardCname(rs.getString(5));
                 board.setRegisterDate(rs.getDate(6));
                 list.add(board);
             }
