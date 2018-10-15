@@ -5,11 +5,20 @@ import java.util.Date;
 public class User {
     private String id;
     private String password;
-    private String email1;
-    private String email2;
+    private String email1;   //아이디 부분
+    private String email2;  // @ 뒤 주소 부분
     private int isAdmin;
     private Date registerDate;
     private Date updateDate;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getId() {
         return id;

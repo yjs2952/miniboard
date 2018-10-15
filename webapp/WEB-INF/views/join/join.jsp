@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: knh51
@@ -6,11 +7,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="my.example.miniboard.vo.User"%>
 <html>
 <head>
     <title>회원가입</title>
 
     <link href="/css/join_style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+         function goIndex() {
+                location.href="index.jsp";
+        }
+    </script>
+
 
 </head>
 <body>
@@ -18,10 +28,10 @@
     <br><br>
     <b>회원가입</b>
     <br><br>
-    <form method="post" action="joinAction.jsp" name="userInfo" onsubmit="checkValue()">
+    <form method="post" action="/join" name="userInfo" >
         <table>
             <tr>
-                <td id="id">아이디</td>
+                <td class="title">아이디</td>
                 <td>
                     <input type="text" name="id" maxlength="20">
                     <input type="button" value="중복확인" >
@@ -29,18 +39,19 @@
             </tr>
 
             <tr>
-                <td id="password">비밀번호</td>
+                <td class="password">비밀번호</td>
                 <td>
                     <input type="password" name="password" maxlength="15">
                 </td>
             </tr>
 
             <tr>
-                <td id="title">비밀번호 확인</td>
+                <td class="password">비밀번호 확인</td>
                 <td>
                     <input type="password" name="passwordcheck" maxlength="15">
                 </td>
             </tr>
+
 
             <tr>
                 <td class="title">이름</td>
@@ -65,9 +76,11 @@
 
         </table>
         <br>
-        <input type="button" value="가입"/>
-        <input type="button" value="취소">
+        <input type="submit" value="가입">
+        <input type="button" value="취소" onclick="goIndex()">
     </form>
 </div>
+
+        
 </body>
 </html>
