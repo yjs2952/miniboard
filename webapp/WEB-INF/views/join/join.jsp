@@ -9,35 +9,16 @@
 <html>
 <head>
     <title>회원가입</title>
-    <style>
-        #wrap{
-            width:530px;
-            margin-left:auto;
-            margin-right:auto;
-            text-align:center;
-        }
 
-        table{
-            margin-left:auto;
-            margin-right:auto;
-            border:3px solid skyblue
-        }
+    <link href="/join_style.css" rel="stylesheet">
 
-        td{
-            border:1px solid skyblue
-        }
-
-        #title{
-            background-color:skyblue
-        }
-    </style>
 </head>
 <body>
 <div id="wrap">
     <br><br>
     <b>회원가입</b>
     <br><br>
-    <form method="post" action="/join">
+    <form method="post" action="joinAction.jsp" name="userInfo" onsubmit="checkValue()">
         <table>
             <tr>
                 <td id="id">아이디</td>
@@ -55,21 +36,21 @@
             </tr>
 
             <tr>
-                <td id="password-warning">비밀번호 확인</td>
+                <td id="title">비밀번호 확인</td>
                 <td>
                     <input type="password" name="passwordcheck" maxlength="15">
                 </td>
             </tr>
 
             <tr>
-                <td id="name">이름</td>
+                <td class="title">이름</td>
                 <td>
                     <input type="text" name="name" maxlength="40">
                 </td>
             </tr>
 
             <tr>
-                <td id="email1">이메일</td>
+                <td class="title">이메일</td>
                 <td>
                     <input type="text" name="email_1" maxlength="30">@
                     <select name="email_2">
@@ -84,7 +65,8 @@
 
         </table>
         <br>
-        <input type="submit" value="가입"/>  <input type="button" value="취소">
+        <input type="button" value="가입"/>
+        <input type="button" value="취소">
     </form>
 </div>
 </body>
