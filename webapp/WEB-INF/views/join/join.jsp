@@ -10,7 +10,7 @@
 <head>
     <title>회원가입</title>
 
-    <link href="/join_style.css" rel="stylesheet">
+    <link href="/css/join_style.css" rel="stylesheet">
 
 </head>
 <body>
