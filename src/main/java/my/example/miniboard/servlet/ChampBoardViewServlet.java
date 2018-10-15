@@ -15,17 +15,18 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/champboard")
-public class ChampBoardServlet extends HttpServlet {
+public class ChampBoardViewServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         BoardDAO boardDAO = new BoardDAO();
         ChampDAO champDAO = new ChampDAO();
-        List<Board> boardList = boardDAO.boardList();
-
         int cid = Integer.parseInt(req.getParameter("cid"));
+
+        List<Board> boardList = boardDAO.getList();
         Champ champAbility = champDAO.champAbility(cid);
+
         req.setAttribute("boardList", boardList);
         req.setAttribute("champAbility", champAbility);
 

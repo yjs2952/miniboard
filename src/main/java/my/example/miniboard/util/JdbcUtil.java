@@ -7,18 +7,23 @@ import java.util.Properties;
 
 public class JdbcUtil {
 
-    public static Connection connection() {
+    private static JdbcUtil getInstance = new JdbcUtil();
+    private Connection conn;
 
-        Properties prop = new Properties();
+    private JdbcUtil(){
+        ClassLoader classLoader = null;
+        Properties prop = null;
+        URL resourceURl = null;
+
         String driver = null;
         String url = null;
         String user = null;
         String pw = null;
 
         try {
-            ClassLoader currentThreadClassLoader = Thread.currentThread().getContextClassLoader();
-            URL resourceURl = currentThreadClassLoader.getResource("DB/db.properties");
-
+            classLoader = Thread.currentThread().getContextClassLoader();
+            resourceURl = classLoader.getResource("DB/db.properties");
+            prop = new Properties();
             prop.load(resourceURl.openStream());
 
             driver = prop.getProperty("JDBC.Driver");
@@ -26,27 +31,23 @@ public class JdbcUtil {
             user = prop.getProperty("JDBC.Username");
             pw = prop.getProperty("JDBC.Password");
 
-        } catch (IOException ie) {
-            ie.printStackTrace();
-        }
-
-        return connection(driver, url, user, pw);
-    }
-
-    public static Connection connection(String driver, String url, String dbId, String dbPassword) {
-
-        Connection conn = null;
-        try {
             Class.forName(driver);
-            conn = DriverManager.getConnection(url, dbId, dbPassword);
+            conn = DriverManager.getConnection(url, user, pw);
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    };
 
+    public static JdbcUtil getInstance(){
+        return getInstance;
+    }
+
+    public Connection getConnection() {
         return conn;
     }
 
-    public static void close(Connection conn, PreparedStatement ps) {
+    public void close(PreparedStatement ps) {
         if (ps != null) {
             try {
                 ps.close();
@@ -64,7 +65,7 @@ public class JdbcUtil {
         }
     }
 
-    public static void close(Connection conn, PreparedStatement ps, ResultSet rs) {
+    public void close(PreparedStatement ps, ResultSet rs) {
         if (rs != null) {
             try {
                 rs.close();
@@ -72,6 +73,6 @@ public class JdbcUtil {
                 e.printStackTrace();
             }
         }
-        close(conn, ps);
+        close(ps);
     }
 }
