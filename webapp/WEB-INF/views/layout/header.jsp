@@ -31,9 +31,9 @@
                                                 <input type="text" class="form-control mx-sm-1 form-control-sm" id="user_pw" name="user_pw" placeholder="비밀번호">
                                         </div>
                                         <div class="form-group">
-                                                <button type="submit" class="btn btn-sm btn-primary mx-sm-1">sign in</button>
-                                                <button type="submit" class="btn btn-sm btn-success ml-sm-1">sign up</button>
-                                        </div>
+                                                <button type="button" class="btn btn-sm btn-primary mx-sm-1">sign in</button>
+                                                <a href="/miniboard/join"><button type="button" class="btn btn-sm btn-success ml-sm-1">sign up</button> </a>
+                                         </div>
                                 </div>
                         </form>
                 </div>
